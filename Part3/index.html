@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Optimization Problem Solver</title>
+  </head>
+  <body>
+    <h1>Optimization Problem Solver</h1>
+    <form>
+      <label for="max-min">Maximize or Minimize:</label>
+      <select name="max-min">
+        <option value="max">Maximize</option>
+        <option value="min">Minimize</option>
+      </select>
+      <br><br>
+      <label for="coefficients">Z = </label>
+      <input type="text" name="coefficients" id="x1coefficients">
+      <label for="coefficients">X1 + </label>
+      <input type="text" name="coefficients" id="x2coefficients">
+      <label for="coefficients">X2</label>
+      <br><br>
+      <label for="constraints">Constraints:</label>
+      <br><br>
+      <input type="text" name="constraints" id="constraints1-x1coefficients">
+      <label for="constraints">X1 + </label>
+      <input type="text" name="constraints" id="constraints1-x2coefficients">
+      <label for="constraints">X2  </label>
+      <br><br>
+      <button type="button" onclick="solve()">Solve</button>
+    </form>
+    <div id="solution"></div>
+    <script>
+      function solve() {
+        var maxMin = document.getElementsByName("max-min")[0].value;
+        var coefficients = document.getElementById("coefficients").value;
+        var constraints = document.getElementById("constraints").value;
+        if (useDb) {
+          // Make API call to backend to fetch pre-calculated solution
+        } else {
+          // Make API call to backend to calculate optimal solution
+        }
+      }
+    </script>
+  </body>
+</html>
